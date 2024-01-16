@@ -1,0 +1,36 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 5c28f08d-9f3d-42bc-88bd-04b974ce99c8
+      restapiintegration:
+        authType: oauth-client-cred
+        body: ""
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers:
+          - key: Authorization
+            value: Bearer QfS4s-zco58HTHnPJB-uM2rDFqEI6Cjr
+            valueOptions: []
+        httpMethod: GET
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params: []
+        responseType: auto
+        urlBase: ""
+        urlPath: /demo-commerce/products
+metadata:
+  description: ""
+  folder: ""
+  id: 7fe2aa40-373c-40ac-ae3b-4ed22aa01d49
+  name: products
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-09T13:48:22.863Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149

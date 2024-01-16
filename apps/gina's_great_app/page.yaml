@@ -1,0 +1,2601 @@
+applicationId: 687b112f-3112-4e28-9457-08ddc9113149
+id: d4d3052b-9a73-46e5-8c0d-5f965eaceb9e
+isHidden: false
+layouts:
+  - dsl:
+      apis:
+        apiMap:
+          021e507b-6337-4d31-a33d-7be5cfa2c0b0:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 021e507b-6337-4d31-a33d-7be5cfa2c0b0
+            onError:
+              - id: bdaa07dd-0a5a-4e57-83ea-2f43a307740e
+                message: "{{Add_product.error}}"
+                style: error
+                type: showAlert
+          3b96e2b3-bbb7-4086-9566-685a06549135:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 3b96e2b3-bbb7-4086-9566-685a06549135
+            onError:
+              - id: 7836c662-3cc9-4909-9995-64e20b7e835f
+                message: "{{Types.error}}"
+                style: error
+                type: showAlert
+          42f4e1c0-80d6-475f-b34d-503794be64ec:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 42f4e1c0-80d6-475f-b34d-503794be64ec
+            onError:
+              - id: 8e672356-a747-4e6b-98f9-5be5142a8747
+                message: "{{zone.error}}"
+                style: error
+                type: showAlert
+          7fe2aa40-373c-40ac-ae3b-4ed22aa01d49:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 7fe2aa40-373c-40ac-ae3b-4ed22aa01d49
+            onError:
+              - id: 9a864941-564b-4921-9150-885669ac8d1a
+                message: "{{products.error}}"
+                style: error
+                type: showAlert
+          83c2f38f-6d04-45d5-8242-2b51dd92725a:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 83c2f38f-6d04-45d5-8242-2b51dd92725a
+            onError:
+              - id: 02fc77b2-cfa2-4a75-aaf2-ce5803db66af
+                message: "{{Tax_category.error}}"
+                style: error
+                type: showAlert
+          b29f1adc-aed8-4ad9-98a8-68dabcfc64bb:
+            dynamicTriggerPathList:
+              - key: onError
+            id: b29f1adc-aed8-4ad9-98a8-68dabcfc64bb
+            onError:
+              - id: cc501955-f531-40a5-bf05-fe07c4cc4779
+                message: "{{API1.error}}"
+                style: error
+                type: showAlert
+          f3ffecde-b715-4d0b-a968-e83044ed6614:
+            dynamicTriggerPathList:
+              - key: onError
+            id: f3ffecde-b715-4d0b-a968-e83044ed6614
+            onError:
+              - id: 4b72cdad-0986-4aaa-8e08-e37fa0a24d47
+                message: "{{Shipping_get.error}}"
+                style: error
+                type: showAlert
+          f8580de7-07a1-4c69-bf7e-69ace174238a:
+            dynamicTriggerPathList:
+              - key: onError
+            id: f8580de7-07a1-4c69-bf7e-69ace174238a
+            onError:
+              - id: e1ca3475-f7e9-43d3-b890-9299d8b57f00
+                message: "{{shipping_create.error}}"
+                style: error
+                type: showAlert
+      backgroundColor: none
+      cachedData:
+        pageLoadActions:
+          apiDeps:
+            Shipping_get: []
+            products: []
+          apiNames:
+            - Shipping_get
+            - products
+      canExtend: true
+      children:
+        - canExtend: true
+          children:
+            - backgroundColor: none
+              canExtend: true
+              children:
+                - animateLoading: true
+                  cachedColumnSettings:
+                    action:
+                      buttonLabel: Approve
+                      columnType: button
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: action
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: action
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      notation: standard
+                      onClick:
+                        - code: showAlert(currentRow.name + ' is approved!', 'success')
+                          id: id0
+                          newWindow: true
+                          type: runJs
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    date_joined:
+                      columnType: date
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: date_joined
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      inputFormat: YYYY-MM-DD
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: date joined
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      outputFormat: MM-DD-YYYY
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    name:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditable: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: name
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    photo:
+                      columnType: image
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: photo
+                      imageBorderRadius:
+                        mode: "%"
+                        value: 50
+                      imageSize: FIXED
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: photo
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    twitter:
+                      columnType: link
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: twitter
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: twitter
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return '@' +
+                        currentRow.twitter?.split('/').pop()})}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  collapseWhenHidden: false
+                  columnOrder:
+                    - createdAt
+                    - createdBy
+                    - productType
+                    - id
+                    - lastMessageSequenceNumber
+                    - lastModifiedAt
+                    - lastModifiedBy
+                    - key
+                    - masterData
+                    - lastVariantId
+                    - version
+                    - versionModifiedAt
+                  compactMode: SHORT
+                  defaultFilters: "{}"
+                  defaultSelectedRow: "0"
+                  derivedColumns: {}
+                  dynamicBindingPathList:
+                    - key: tableData
+                    - key: primaryColumns.createdAt.computedValue
+                    - key: primaryColumns.createdAt.linkUrl
+                    - key: primaryColumns.createdAt.linkLabel
+                    - key: primaryColumns.createdBy.computedValue
+                    - key: primaryColumns.createdBy.linkUrl
+                    - key: primaryColumns.createdBy.linkLabel
+                    - key: primaryColumns.id.computedValue
+                    - key: primaryColumns.id.linkUrl
+                    - key: primaryColumns.id.linkLabel
+                    - key: primaryColumns.key.computedValue
+                    - key: primaryColumns.key.linkUrl
+                    - key: primaryColumns.key.linkLabel
+                    - key: primaryColumns.lastMessageSequenceNumber.computedValue
+                    - key: primaryColumns.lastMessageSequenceNumber.linkUrl
+                    - key: primaryColumns.lastMessageSequenceNumber.linkLabel
+                    - key: primaryColumns.lastModifiedAt.computedValue
+                    - key: primaryColumns.lastModifiedAt.linkUrl
+                    - key: primaryColumns.lastModifiedAt.linkLabel
+                    - key: primaryColumns.lastModifiedBy.computedValue
+                    - key: primaryColumns.lastModifiedBy.linkUrl
+                    - key: primaryColumns.lastModifiedBy.linkLabel
+                    - key: primaryColumns.lastVariantId.computedValue
+                    - key: primaryColumns.lastVariantId.linkUrl
+                    - key: primaryColumns.lastVariantId.linkLabel
+                    - key: primaryColumns.masterData.computedValue
+                    - key: primaryColumns.masterData.linkUrl
+                    - key: primaryColumns.masterData.linkLabel
+                    - key: primaryColumns.productType.computedValue
+                    - key: primaryColumns.productType.linkUrl
+                    - key: primaryColumns.productType.linkLabel
+                    - key: primaryColumns.version.computedValue
+                    - key: primaryColumns.version.linkUrl
+                    - key: primaryColumns.version.linkLabel
+                    - key: primaryColumns.versionModifiedAt.computedValue
+                    - key: primaryColumns.versionModifiedAt.linkUrl
+                    - key: primaryColumns.versionModifiedAt.linkLabel
+                  dynamicPropertyPathList:
+                    - key: enableRowInsertion
+                  dynamicTriggerPathList:
+                    - key: onRowClicked
+                    - key: onSaveChanges
+                    - key: onCancelChanges
+                  enableRowInsertion: "true"
+                  gridColumns: 91
+                  height:
+                    mode: gridUnit
+                    value: 24
+                  horizontalAlignment: LEFT
+                  isDownloadable: true
+                  isFilterable: true
+                  isLoading: false
+                  isSearchable: true
+                  isVisible: true
+                  label: Data
+                  left:
+                    mode: gridUnit
+                    value: 5
+                  onCancelChanges:
+                    - id: dkyq9hl20k
+                      newWindow: true
+                  onRowClicked:
+                    - id: faxlwrqms1
+                      newWindow: true
+                  onSaveChanges:
+                    - apiNames: []
+                      id: vspby8xhj2
+                      newWindow: true
+                      onError:
+                        - alertDuration: "4"
+                          apiNames:
+                            - Shipping_get
+                          id: 4jwisvn4cn
+                          message: Error
+                          newWindow: true
+                          style: error
+                          type: showAlert
+                      onSuccess:
+                        - apiNames:
+                            - shipping_create
+                          id: gsahcgz5vb
+                          newWindow: true
+                          type: executeApi
+                        - id: o8bf1bx8d7
+                          newWindow: true
+                      type: executeApi
+                  pageType: NONE
+                  parentId: dwpvpsnarl
+                  primaryColumns:
+                    createdAt:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: createdAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: createdAt
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    createdBy:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: createdBy
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: createdBy
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    id:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: id
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: id
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    key:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: key
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: key
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastMessageSequenceNumber:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastMessageSequenceNumber })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastMessageSequenceNumber
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 4
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: lastMessageSequenceNumber
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastMessageSequenceNumber })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastMessageSequenceNumber })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastModifiedAt:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastModifiedAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: lastModifiedAt
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastModifiedBy:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastModifiedBy
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 6
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: lastModifiedBy
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastVariantId:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastVariantId })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastVariantId
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 7
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: lastVariantId
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastVariantId })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastVariantId })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    masterData:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.masterData })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: masterData
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 8
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: masterData
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.masterData })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.masterData })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    productType:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.productType })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: productType
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 9
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: productType
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.productType })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.productType })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    version:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: version
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 10
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: version
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    versionModifiedAt:
+                      columnType: text
+                      computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: versionModifiedAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 11
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: versionModifiedAt
+                      linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  tableData: "{{products.response.results}}"
+                  tableHeader: Products
+                  textSize: PARAGRAPH
+                  top:
+                    mode: gridUnit
+                    value: 129
+                  type: TABLE_WIDGET
+                  verticalAlignment: CENTER
+                  widgetId: 81o1tz95j0
+                  widgetName: Table1
+                  width:
+                    mode: gridUnit
+                    value: 91
+                - animateLoading: true
+                  cachedColumnSettings:
+                    action:
+                      buttonLabel: Approve
+                      columnType: button
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: action
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: action
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      notation: standard
+                      onClick:
+                        - code: showAlert(currentRow.name + ' is approved!', 'success')
+                          id: id0
+                          newWindow: true
+                          type: runJs
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    date_joined:
+                      columnType: date
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: date_joined
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      inputFormat: YYYY-MM-DD
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: date joined
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      outputFormat: MM-DD-YYYY
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    photo:
+                      columnType: image
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: photo
+                      imageBorderRadius:
+                        mode: "%"
+                        value: 50
+                      imageSize: FIXED
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: photo
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    twitter:
+                      columnType: link
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: twitter
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: twitter
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return '@' +
+                        currentRow.twitter?.split('/').pop()})}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  collapseWhenHidden: false
+                  columnOrder:
+                    - createdAt
+                    - createdBy
+                    - name
+                    - id
+                    - description
+                    - isDefault
+                    - lastModifiedAt
+                    - lastModifiedBy
+                    - localizedName
+                    - references
+                    - taxCategory
+                    - version
+                    - versionModifiedAt
+                    - zoneRates
+                    - customColumn1
+                    - key
+                    - customColumn2
+                    - localizedDescription
+                  columnSizeMap:
+                    id: 60
+                  compactMode: SHORT
+                  defaultFilters: "{}"
+                  defaultSelectedRow: "0"
+                  derivedColumns:
+                    customColumn1:
+                      columnType: number
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates[0].shippingRates[0].price.centAmou\
+                        nt})}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn1
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 13
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: shippingRates
+                      linkLabel: ""
+                      linkUrl: ""
+                      maximumFractionDigits: "0"
+                      minimumFractionDigits: "0"
+                      notation: unformatted
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    customColumn2:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates[0].zone.id})}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn2
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 14
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: zone
+                      linkLabel: ""
+                      linkUrl: ""
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  dynamicBindingPathList:
+                    - key: primaryColumns.name.linkUrl
+                    - key: primaryColumns.name.linkLabel
+                    - key: primaryColumns.name.computedValue
+                    - key: primaryColumns.name.displayedValue
+                    - key: tableData
+                    - key: primaryColumns.createdAt.computedValue
+                    - key: primaryColumns.createdAt.linkUrl
+                    - key: primaryColumns.createdAt.linkLabel
+                    - key: primaryColumns.createdBy.computedValue
+                    - key: primaryColumns.createdBy.linkUrl
+                    - key: primaryColumns.createdBy.linkLabel
+                    - key: primaryColumns.description.computedValue
+                    - key: primaryColumns.description.linkUrl
+                    - key: primaryColumns.description.linkLabel
+                    - key: primaryColumns.id.computedValue
+                    - key: primaryColumns.id.linkUrl
+                    - key: primaryColumns.id.linkLabel
+                    - key: primaryColumns.isDefault.computedValue
+                    - key: primaryColumns.isDefault.linkUrl
+                    - key: primaryColumns.isDefault.linkLabel
+                    - key: primaryColumns.lastModifiedAt.computedValue
+                    - key: primaryColumns.lastModifiedAt.linkUrl
+                    - key: primaryColumns.lastModifiedAt.linkLabel
+                    - key: primaryColumns.lastModifiedBy.computedValue
+                    - key: primaryColumns.lastModifiedBy.linkUrl
+                    - key: primaryColumns.lastModifiedBy.linkLabel
+                    - key: primaryColumns.references.computedValue
+                    - key: primaryColumns.references.linkUrl
+                    - key: primaryColumns.references.linkLabel
+                    - key: primaryColumns.taxCategory.computedValue
+                    - key: primaryColumns.taxCategory.linkUrl
+                    - key: primaryColumns.taxCategory.linkLabel
+                    - key: primaryColumns.version.computedValue
+                    - key: primaryColumns.version.linkUrl
+                    - key: primaryColumns.version.linkLabel
+                    - key: primaryColumns.versionModifiedAt.computedValue
+                    - key: primaryColumns.versionModifiedAt.linkUrl
+                    - key: primaryColumns.versionModifiedAt.linkLabel
+                    - key: primaryColumns.zoneRates.computedValue
+                    - key: primaryColumns.zoneRates.linkUrl
+                    - key: primaryColumns.zoneRates.linkLabel
+                    - key: primaryColumns.taxCategory.editOptions
+                    - key: primaryColumns.taxCategory.displayedValue
+                    - key: derivedColumns.customColumn1.computedValue
+                    - key: primaryColumns.customColumn1.computedValue
+                    - key: derivedColumns.customColumn2.computedValue
+                    - key: primaryColumns.customColumn2.computedValue
+                    - key: primaryColumns.customColumn1.editOptions
+                    - key: primaryColumns.customColumn2.editOptions
+                    - key: primaryColumns.localizedName.computedValue
+                    - key: primaryColumns.localizedName.linkUrl
+                    - key: primaryColumns.localizedName.linkLabel
+                    - key: primaryColumns.key.computedValue
+                    - key: primaryColumns.key.linkUrl
+                    - key: primaryColumns.key.linkLabel
+                    - key: primaryColumns.localizedDescription.computedValue
+                    - key: primaryColumns.localizedDescription.linkUrl
+                    - key: primaryColumns.localizedDescription.linkLabel
+                  dynamicPropertyPathList:
+                    - key: primaryColumns.taxCategory.isRequiredOnInsertion
+                  dynamicTriggerPathList:
+                    - key: onRowClicked
+                    - key: onSaveChanges
+                    - key: onCancelChanges
+                    - key: primaryColumns.taxCategory.onDropdownSearchTextChanged
+                    - key: primaryColumns.taxCategory.defaultValue
+                    - key: primaryColumns.customColumn1.defaultValue
+                    - key: primaryColumns.customColumn1.onDropdownSearchTextChanged
+                    - key: primaryColumns.customColumn2.onDropdownSearchTextChanged
+                  enableRowDeletion: false
+                  enableRowInsertion: true
+                  gridColumns: 94
+                  height:
+                    mode: gridUnit
+                    value: 41
+                  horizontalAlignment: LEFT
+                  isDownloadable: true
+                  isFilterable: true
+                  isLoading: false
+                  isSearchable: true
+                  isVisible: true
+                  label: Data
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  onCancelChanges:
+                    - id: 7k45ae8xbf
+                      newWindow: true
+                  onRowClicked:
+                    - id: 9qfkcsmdsu
+                      newWindow: true
+                  onSaveChanges:
+                    - apiNames:
+                        - shipping_create
+                      code: ""
+                      id: a944fe6xsl
+                      newWindow: true
+                      onError:
+                        - alertDuration: "4"
+                          apiNames:
+                            - Shipping_get
+                          id: i44wl4ed5p
+                          message: "{{shipping_create.response}}"
+                          newWindow: true
+                          type: showAlert
+                      onSuccess:
+                        - apiNames:
+                            - Shipping_get
+                          id: ocwmbmgoc8
+                          newWindow: true
+                          type: executeApi
+                      type: executeApi
+                  pageType: CLIENT_SIDE
+                  parentId: dwpvpsnarl
+                  primaryColumns:
+                    createdAt:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: createdAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: createdAt
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    createdBy:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: createdBy
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: createdBy
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.createdBy })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    customColumn1:
+                      columnType: number
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates[0].shippingRates[0].price.centAmou\
+                        nt})}}"
+                      defaultValue: "200"
+                      editInputType: NUMBER
+                      editOptions: |-
+                        {{[
+                          {
+                            "label": "New York",
+                            "value": "NEW YORK"
+                          },
+                          {
+                            "label": "Toronto",
+                            "value": "TORONTO"
+                          }
+                        ]}}
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn1
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 13
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isRequiredOnInsertion: false
+                      isVisible: true
+                      label: shippingRates
+                      linkLabel: ""
+                      linkUrl: ""
+                      maximumFractionDigits: "0"
+                      minimumFractionDigits: "0"
+                      notation: unformatted
+                      onDropdownSearchTextChanged:
+                        - id: 7iioab3y89
+                          newWindow: true
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    customColumn2:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates[0].zone.id})}}"
+                      editInputType: DROPDOWN
+                      editMultiSelect: true
+                      editOptions: |-
+                        {{[
+                          {
+                            "label": "United Kingdom",
+                            "value": "df662c1d-bf2e-4f1f-8971-5cdbd2e213d9"
+                          },
+                          {
+                            "label": "US",
+                            "value": "ad46dcb9-caea-47b1-8b6c-ab05abbba147"
+                          }
+                        ]}}
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: customColumn2
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 14
+                      isDerived: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: zone
+                      linkLabel: ""
+                      linkUrl: ""
+                      notation: standard
+                      onDropdownSearchTextChanged:
+                        - id: 9b9x8mggli
+                          newWindow: true
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      transformation:
+                        label: label
+                        value: value
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    description:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.description })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: description
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: description
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.description })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.description })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    id:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: id
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 3
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: id
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.id })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    isDefault:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.isDefault })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: isDefault
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 4
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: isDefault
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.isDefault })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.isDefault })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    key:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: key
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 14
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: key
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.key })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastModifiedAt:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastModifiedAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: lastModifiedAt
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    lastModifiedBy:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: lastModifiedBy
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 6
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: lastModifiedBy
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.lastModifiedBy })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    localizedDescription:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedDescription })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: localizedDescription
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 15
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: localizedDescription
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedDescription })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedDescription })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    localizedName:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedName })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: localizedName
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 7
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: localizedName
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedName })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.localizedName })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    name:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: name
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    references:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.references })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: references
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 8
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: references
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.references })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.references })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    taxCategory:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.taxCategory.id})}}"
+                      defaultValue: ""
+                      displayedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.taxCategory.obj.name})}}"
+                      editInputType: TEXT
+                      editOptions: |-
+                        {{
+                        Array.from(new Set(
+                          _.flatten(
+                            Shipping.tableData.map(
+                              ({ taxCategory }) => taxCategory
+                            )
+                          )
+                        ))
+                        }}
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: taxCategory
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 9
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isRequiredOnInsertion: "true"
+                      isVisible: true
+                      label: taxCategory
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.taxCategory })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.taxCategory })}}"
+                      notation: standard
+                      onDropdownSearchTextChanged:
+                        - id: lz5pemw3ul
+                          newWindow: true
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textColor: ""
+                      textSize: PARAGRAPH
+                      transformation:
+                        label: id
+                        value: id
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    version:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      editInputType: TEXT
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: version
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 10
+                      isDerived: false
+                      isEditable: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: version
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.version })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    versionModifiedAt:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: versionModifiedAt
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 11
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: false
+                      label: versionModifiedAt
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.versionModifiedAt })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    zoneRates:
+                      columnType: text
+                      computedValue: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: zoneRates
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 12
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: zoneRates
+                      linkLabel: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates })}}"
+                      linkUrl: "{{Shipping.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.zoneRates })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  showColumnBorders: true
+                  tableData: "{{Shipping_get.response.results}}"
+                  tableHeader: Shipping Methods
+                  textSize: PARAGRAPH
+                  top:
+                    mode: gridUnit
+                    value: 43
+                  type: TABLE_WIDGET
+                  verticalAlignment: CENTER
+                  widgetId: n2mgltt4dt
+                  widgetName: Shipping
+                  width:
+                    mode: gridUnit
+                    value: 94
+                - canOutsideClickClose: true
+                  children:
+                    - canExtend: true
+                      children:
+                        - canExtend: true
+                          children:
+                            - animateLoading: true
+                              collapseWhenHidden: false
+                              gridColumns: 70
+                              height:
+                                mode: gridUnit
+                                value: 3
+                              isLoading: false
+                              isVisible: true
+                              left:
+                                mode: gridUnit
+                                value: 0
+                              parentId: jt0ddzp39f
+                              text: Slideout Title
+                              textAlign: LEFT
+                              textStyle: HEADING_1
+                              textType: text
+                              top:
+                                mode: gridUnit
+                                value: 0
+                              type: TEXT_WIDGET
+                              verticalAlign: AUTO
+                              widgetId: eo6hodrkv4
+                              widgetName: Text1
+                              width:
+                                mode: gridUnit
+                                value: 70
+                          collapseWhenHidden: false
+                          detachFromLayout: true
+                          gridColumns: 80
+                          height:
+                            mode: gridUnit
+                            value: 69
+                          isDisabled: false
+                          isLoading: false
+                          isVisible: true
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          minHeight:
+                            mode: px
+                            value: 800
+                          parentId: tbriyz5cgu
+                          shouldScrollContents: false
+                          top:
+                            mode: gridUnit
+                            value: 0
+                          type: CANVAS_WIDGET
+                          widgetId: jt0ddzp39f
+                          widgetName: Canvas2
+                          width:
+                            mode: gridUnit
+                            value: 0
+                      collapseWhenHidden: false
+                      detachFromLayout: true
+                      dragDisabled: true
+                      gridColumns: 80
+                      height:
+                        mode: gridUnit
+                        value: 69
+                      isLoading: false
+                      isVisible: true
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      minHeight:
+                        mode: px
+                        value: 800
+                      parentId: 54f6jjzvau
+                      top:
+                        mode: gridUnit
+                        value: 0
+                      type: SECTION_WIDGET
+                      widgetId: tbriyz5cgu
+                      widgetName: Section2
+                      width:
+                        mode: gridUnit
+                        value: 0
+                  detachFromLayout: true
+                  dynamicBindingPathList: []
+                  dynamicTriggerPathList:
+                    - key: onOpen
+                    - key: onClose
+                  gridColumns: 80
+                  hasBackdrop: true
+                  height:
+                    mode: gridUnit
+                    value: 69
+                  isLoading: false
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  onClose:
+                    - id: 85ju435aj5
+                      newWindow: true
+                  onOpen:
+                    - id: jou89m8dc0
+                      newWindow: true
+                  parentId: dwpvpsnarl
+                  shouldScrollContents: true
+                  top:
+                    mode: gridUnit
+                    value: 0
+                  type: SLIDEOUT_WIDGET
+                  widgetId: 54f6jjzvau
+                  widgetName: Slideout1
+                  width:
+                    mode: gridUnit
+                    value: 80
+                - animateLoading: true
+                  cachedColumnSettings: {}
+                  collapseWhenHidden: false
+                  columnOrder:
+                    - photo
+                    - name
+                    - twitter
+                    - date_joined
+                    - email
+                    - action
+                  compactMode: SHORT
+                  defaultFilters: "{}"
+                  defaultSelectedRow: "0"
+                  derivedColumns: {}
+                  dynamicBindingPathList:
+                    - key: primaryColumns.name.linkUrl
+                    - key: primaryColumns.name.linkLabel
+                    - key: primaryColumns.name.computedValue
+                    - key: primaryColumns.name.displayedValue
+                    - key: primaryColumns.twitter.computedValue
+                    - key: primaryColumns.twitter.linkUrl
+                    - key: primaryColumns.twitter.linkLabel
+                    - key: primaryColumns.date_joined.computedValue
+                    - key: primaryColumns.date_joined.linkUrl
+                    - key: primaryColumns.date_joined.linkLabel
+                    - key: primaryColumns.photo.computedValue
+                    - key: primaryColumns.photo.linkUrl
+                    - key: primaryColumns.photo.linkLabel
+                    - key: primaryColumns.photo.displayedValue
+                    - key: primaryColumns.email.computedValue
+                    - key: primaryColumns.email.linkUrl
+                    - key: primaryColumns.email.linkLabel
+                    - key: primaryColumns.email.displayedValue
+                    - key: primaryColumns.action.computedValue
+                    - key: primaryColumns.action.linkUrl
+                    - key: primaryColumns.action.linkLabel
+                    - key: primaryColumns.action.buttonLabel
+                    - key: primaryColumns.action.displayedValue
+                  dynamicTriggerPathList:
+                    - key: primaryColumns.action.onClick
+                    - key: onRowClicked
+                    - key: onSaveChanges
+                    - key: onCancelChanges
+                    - key: primaryColumns.name.onClick
+                  gridColumns: 66
+                  height:
+                    mode: gridUnit
+                    value: 29
+                  horizontalAlignment: LEFT
+                  isDownloadable: true
+                  isFilterable: true
+                  isLoading: false
+                  isSearchable: true
+                  isVisible: true
+                  label: Data
+                  left:
+                    mode: gridUnit
+                    value: 14
+                  onCancelChanges:
+                    - id: t6o632wvxg
+                      newWindow: true
+                  onRowClicked:
+                    - apiNames:
+                        - Types
+                      code: ""
+                      id: 6u7f56zkkx
+                      newWindow: true
+                      type: runJs
+                  onSaveChanges:
+                    - id: dc56zca5ma
+                      newWindow: true
+                  pageType: NONE
+                  parentId: dwpvpsnarl
+                  primaryColumns:
+                    action:
+                      buttonLabel: Approve
+                      columnType: button
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: action
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: action
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      notation: standard
+                      onClick:
+                        - code: showAlert(currentRow.name + ' is approved!', 'success')
+                          id: id0
+                          newWindow: true
+                          type: runJs
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    date_joined:
+                      columnType: date
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: date_joined
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      inputFormat: YYYY-MM-DD
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: date joined
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      outputFormat: MM-DD-YYYY
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    email:
+                      columnType: text
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      editInputType: TEXT
+                      editIsRequired: true
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: email
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 4
+                      isDerived: false
+                      isEditable: true
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: email
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    name:
+                      buttonStyle: ""
+                      columnType: text
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: name
+                      imageBorderRadius:
+                        mode: px
+                        value: 4
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isFrozen: false
+                      isVisible: true
+                      label: name
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      notation: standard
+                      onClick:
+                        - id: xr1i8n69xf
+                          newWindow: true
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    photo:
+                      columnType: image
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: photo
+                      imageBorderRadius:
+                        mode: "%"
+                        value: 50
+                      imageSize: GROW
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: photo
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    twitter:
+                      columnType: link
+                      computedValue: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: twitter
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: twitter
+                      linkLabel: "{{Table2.tableDataWithInserts.map((currentRow) => { return '@' +
+                        currentRow.twitter?.split('/').pop()})}}"
+                      linkUrl: "{{Table2.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  tableData: |-
+                    [
+                      {
+                        "name": "Billie Eilish test",
+                        "twitter": "https://twitter.com/billieeilish",
+                        "date_joined": "2019-01-06",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/billie_eilish.png",
+                        "email": "bad_guy@gmail.com",
+                        "action": ""
+                      },
+                    ]
+                  tableHeader: Users
+                  textSize: PARAGRAPH
+                  top:
+                    mode: gridUnit
+                    value: 9
+                  type: TABLE_WIDGET
+                  verticalAlignment: CENTER
+                  widgetId: tioqop625z
+                  widgetName: Table2
+                  width:
+                    mode: gridUnit
+                    value: 66
+                - animateLoading: true
+                  cachedColumnSettings: {}
+                  collapseWhenHidden: false
+                  columnOrder:
+                    - cat
+                    - photo
+                    - name
+                    - twitter
+                    - date_joined
+                    - email
+                    - action
+                  compactMode: SHORT
+                  defaultFilters: "{}"
+                  defaultSelectedRow: "0"
+                  derivedColumns: {}
+                  dynamicBindingPathList:
+                    - key: primaryColumns.name.linkUrl
+                    - key: primaryColumns.name.linkLabel
+                    - key: primaryColumns.name.computedValue
+                    - key: primaryColumns.name.displayedValue
+                    - key: primaryColumns.twitter.computedValue
+                    - key: primaryColumns.twitter.linkUrl
+                    - key: primaryColumns.twitter.linkLabel
+                    - key: primaryColumns.date_joined.computedValue
+                    - key: primaryColumns.date_joined.linkUrl
+                    - key: primaryColumns.date_joined.linkLabel
+                    - key: primaryColumns.photo.computedValue
+                    - key: primaryColumns.photo.linkUrl
+                    - key: primaryColumns.photo.linkLabel
+                    - key: primaryColumns.photo.displayedValue
+                    - key: primaryColumns.email.computedValue
+                    - key: primaryColumns.email.linkUrl
+                    - key: primaryColumns.email.linkLabel
+                    - key: primaryColumns.email.displayedValue
+                    - key: primaryColumns.action.computedValue
+                    - key: primaryColumns.action.linkUrl
+                    - key: primaryColumns.action.linkLabel
+                    - key: primaryColumns.action.buttonLabel
+                    - key: primaryColumns.action.displayedValue
+                    - key: primaryColumns.cat.computedValue
+                    - key: primaryColumns.cat.linkUrl
+                    - key: primaryColumns.cat.linkLabel
+                  dynamicTriggerPathList:
+                    - key: primaryColumns.action.onClick
+                    - key: onRowClicked
+                    - key: onSaveChanges
+                    - key: onCancelChanges
+                  gridColumns: 87
+                  height:
+                    mode: gridUnit
+                    value: 34
+                  horizontalAlignment: LEFT
+                  isDownloadable: true
+                  isFilterable: true
+                  isLoading: false
+                  isSearchable: true
+                  isVisible: true
+                  label: Data
+                  left:
+                    mode: gridUnit
+                    value: 6
+                  onCancelChanges:
+                    - id: 557hqjq900
+                      newWindow: true
+                  onRowClicked:
+                    - id: 5a7kbginx8
+                      newWindow: true
+                  onSaveChanges:
+                    - id: cdhmisoppq
+                      newWindow: true
+                  pageType: NONE
+                  parentId: dwpvpsnarl
+                  primaryColumns:
+                    action:
+                      buttonLabel: Approve
+                      columnType: button
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: action
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 5
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: action
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.action })}}"
+                      notation: standard
+                      onClick:
+                        - code: showAlert(currentRow.name + ' is approved!', 'success')
+                          id: id0
+                          newWindow: true
+                          type: runJs
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    cat:
+                      columnType: text
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.cat })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: cat
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: cat
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.cat })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.cat })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    date_joined:
+                      columnType: date
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: date_joined
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 2
+                      inputFormat: YYYY-MM-DD
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: date joined
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.date_joined })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      outputFormat: MM-DD-YYYY
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    email:
+                      columnType: text
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: email
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 4
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: email
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.email })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    name:
+                      columnType: text
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: name
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 0
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: name
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.name })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    photo:
+                      columnType: image
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: photo
+                      imageBorderRadius:
+                        mode: "%"
+                        value: 50
+                      imageSize: FIXED
+                      index: 3
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: photo
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.photo })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                    twitter:
+                      columnType: link
+                      computedValue: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      enableFilter: true
+                      enableSort: true
+                      headerIcon: ""
+                      headerIconPosition: LEFT
+                      horizontalAlignment: LEFT
+                      id: twitter
+                      imageBorderRadius:
+                        mode: px
+                        value: 0
+                      imageSize: FIT
+                      index: 1
+                      isDerived: false
+                      isEditableOnInsertion: true
+                      isVisible: true
+                      label: twitter
+                      linkLabel: "{{Table3.tableDataWithInserts.map((currentRow) => { return '@' +
+                        currentRow.twitter?.split('/').pop()})}}"
+                      linkUrl: "{{Table3.tableDataWithInserts.map((currentRow) => { return
+                        currentRow.twitter })}}"
+                      notation: standard
+                      openImageUrl: true
+                      openInNewTab: true
+                      tagDisplayConfig: {}
+                      textSize: PARAGRAPH
+                      useLabelAsDisplayValue: true
+                      verticalAlignment: CENTER
+                      width: 150
+                  tableData: |-
+                    [
+                      {
+                        "cat": "Billie Eilish",
+                        "twitter": "https://twitter.com/billieeilish",
+                        "date_joined": "2019-01-06",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/billie_eilish.png",
+                        "email": "bad_guy@gmail.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Thom Yorke",
+                        "twitter": "https://twitter.com/thomyorke",
+                        "date_joined": "2019-01-05",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/thom_yorke.png",
+                        "email": "karma_police_thom@hotmail.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Katy Perry",
+                        "twitter": "https://twitter.com/katyperry",
+                        "date_joined": "2019-01-02",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/katy_perry.png",
+                        "email": "katycat@hotmail.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Ryan Gosling",
+                        "twitter": "https://twitter.com/RyanGosling",
+                        "date_joined": "2019-01-03",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/ryan_gosling.png",
+                        "email": "ryan_the_notebook@gmail.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Dua Lipa",
+                        "twitter": "https://twitter.com/DUALIPA",
+                        "date_joined": "2019-01-07",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/dua_lipa.png",
+                        "email": "dua_levitating@yahoo.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Beyonce Knowles",
+                        "twitter": "https://twitter.com/Beyonce",
+                        "date_joined": "2019-01-09",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/beyonce_knowles.png",
+                        "email": "beyonce_run_the_world@hotmail.com",
+                        "action": ""
+                      },
+                      {
+                        "name": "Lopez Jennifer",
+                        "twitter": "https://twitter.com/JLo",
+                        "date_joined": "2019-01-04",
+                        "photo": "https://lowcode.s3-us-west-2.amazonaws.com/jennifer_lopez.png",
+                        "email": "jenny_from_the_block@yahoo.com",
+                        "action": ""
+                      }
+                    ]
+                  tableHeader: Users
+                  textSize: PARAGRAPH
+                  top:
+                    mode: gridUnit
+                    value: 87
+                  type: TABLE_WIDGET
+                  verticalAlignment: CENTER
+                  widgetId: w78z9k33yy
+                  widgetName: Table3
+                  width:
+                    mode: gridUnit
+                    value: 87
+              containerStyle: none
+              detachFromLayout: true
+              dragDisabled: true
+              dynamicBindingPathList: []
+              dynamicTriggerPathList: []
+              gridColumns: 96
+              height:
+                mode: gridUnit
+                value: 153
+              isLoading: false
+              isVisible: true
+              layout: FIXED_GRID
+              left:
+                mode: gridUnit
+                value: 0
+              minHeight:
+                mode: px
+                value: 1292
+              parentId: lm2jrimm2x
+              top:
+                mode: gridUnit
+                value: 0
+              type: CANVAS_WIDGET
+              widgetId: dwpvpsnarl
+              widgetName: Canvas1
+              width:
+                mode: gridUnit
+                value: 0
+          detachFromLayout: true
+          dragDisabled: true
+          gridColumns: 96
+          height:
+            mode: gridUnit
+            value: 155
+          isLoading: false
+          isVisible: true
+          left:
+            mode: gridUnit
+            value: 0
+          parentId: "0"
+          shouldScrollContents: true
+          top:
+            mode: gridUnit
+            value: 0
+          type: SECTION_WIDGET
+          widgetId: lm2jrimm2x
+          widgetName: Section1
+          width:
+            mode: gridUnit
+            value: 96
+      detachFromLayout: true
+      dynamicBindingPathList: []
+      gridColumns: 96
+      height:
+        mode: gridUnit
+        value: 99
+      left:
+        mode: gridUnit
+        value: 0
+      stateVars:
+        stateVarMap: {}
+      timers:
+        timerMap: {}
+      top:
+        mode: gridUnit
+        value: 0
+      type: PAGE_WIDGET
+      version: 8
+      widgetId: "0"
+      widgetName: Page
+      width:
+        mode: gridUnit
+        value: 0
+    id: 0c3c32a9-5401-459b-b6bb-3d538dcebc19
+name: Page1

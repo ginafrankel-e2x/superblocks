@@ -1,0 +1,74 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 7e26d403-aa0d-4924-991e-2c00578145fb
+      restapiintegration:
+        authType: oauth-client-cred
+        body: |-
+          {
+            "name" : "custom-3",
+            "description" : "{{Shipping.selectedRow.description}}",
+          	"key": "custom",
+            "taxCategory" : {
+              "typeId" : "tax-category",
+              "id" : "{{Shipping.selectedRow.taxCategory}}"
+            },
+            "zoneRates" : [ {
+              "zone" : {
+                "typeId" : "zone",
+                "id" : "{{Shipping.selectedRow.customColumn2}}"
+              },
+              "shippingRates" : [ {
+                "price" : {
+                  "currencyCode" : "EUR",
+                  "centAmount" : {{Shipping.selectedRow.customColumn1}}
+                }
+              } ]
+          } ],
+            "isDefault" : false,
+          		"custom": {
+                "type": {
+                    "key": "shippingMethodType",
+                    "typeId": "type"
+                },
+                "fields": {
+                    "paymentGroup": "PG1"
+                }
+            },
+          	"predicate": "lineItemExists(attributes.paymentGroup = \"PG1\")"	
+          }
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers:
+          - key: Content-Type
+            value: application/json
+            valueOptions: []
+        httpMethod: POST
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params:
+          - key: expand
+            value: taxCategory
+            valueOptions: []
+          - key: expand
+            value: zone
+            valueOptions: []
+        responseType: auto
+        urlBase: ""
+        urlPath: demo-commerce/shipping-methods
+metadata:
+  description: ""
+  folder: ""
+  id: f8580de7-07a1-4c69-bf7e-69ace174238a
+  name: shipping_create
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-10T14:23:06.272Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149

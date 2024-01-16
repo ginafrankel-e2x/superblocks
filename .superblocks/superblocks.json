@@ -1,0 +1,12 @@
+{
+  "configType": "ROOT",
+  "metadata": {
+    "cliVersion": "1.4.2"
+  },
+  "resources": {
+    "687b112f-3112-4e28-9457-08ddc9113149": {
+      "location": "apps/gina's_great_app",
+      "resourceType": "APPLICATION"
+    }
+  }
+}

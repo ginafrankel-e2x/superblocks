@@ -1,0 +1,15 @@
+{
+  "apis": {
+    "021e507b-6337-4d31-a33d-7be5cfa2c0b0": "Add_product",
+    "3b96e2b3-bbb7-4086-9566-685a06549135": "Types",
+    "42f4e1c0-80d6-475f-b34d-503794be64ec": "zone",
+    "7fe2aa40-373c-40ac-ae3b-4ed22aa01d49": "products",
+    "83c2f38f-6d04-45d5-8242-2b51dd92725a": "Tax_category",
+    "b29f1adc-aed8-4ad9-98a8-68dabcfc64bb": "API1",
+    "f3ffecde-b715-4d0b-a968-e83044ed6614": "Shipping_get",
+    "f8580de7-07a1-4c69-bf7e-69ace174238a": "shipping_create"
+  },
+  "configType": "APPLICATION",
+  "defaultPageId": "d4d3052b-9a73-46e5-8c0d-5f965eaceb9e",
+  "id": "687b112f-3112-4e28-9457-08ddc9113149"
+}

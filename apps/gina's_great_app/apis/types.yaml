@@ -1,0 +1,51 @@
+blocks:
+  - name: Step1
+    step:
+      integration: e95f1420-c6d7-4719-8ea0-cef88f6d46fa
+      restapiintegration:
+        authType: oauth-client-cred
+        body: |-
+          {
+            "key": "shippingMethodType",
+            "name": { "en": "Additional field to store payment groups" },
+            "resourceTypeIds": ["shipping-method"],
+            "fieldDefinitions": [
+              {
+                "type":{
+                  "name":"String"
+                },
+                "name":"paymentGroup",
+                "label":{
+                  "en":"Payment Group"
+                },
+                "required":false,
+                "inputHint":"SingleLine"
+              }
+            ]
+          }
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers: []
+        httpMethod: POST
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params: []
+        responseType: auto
+        urlBase: ""
+        urlPath: /demo-commerce/types
+metadata:
+  description: ""
+  folder: ""
+  id: 3b96e2b3-bbb7-4086-9566-685a06549135
+  name: Types
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-10T13:58:33.917Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149

@@ -1,0 +1,42 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 69fd44e8-88eb-4028-b18b-992ab28a08bb
+      restapiintegration:
+        authType: oauth-client-cred
+        body: |-
+          {
+            "name" : "test-tax-category",
+            "rates" : [ {
+              "name" : "test-tax-category",
+              "amount" : 0.2,
+              "includedInPrice" : true,
+              "country" : "DE"
+            } ]
+          }
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers: []
+        httpMethod: POST
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params: []
+        responseType: auto
+        urlBase: ""
+        urlPath: /demo-commerce/tax-categories
+metadata:
+  description: ""
+  folder: ""
+  id: 83c2f38f-6d04-45d5-8242-2b51dd92725a
+  name: Tax_category
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-10T12:15:27.382Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149

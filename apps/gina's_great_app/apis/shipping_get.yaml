@@ -1,0 +1,42 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 7e26d403-aa0d-4924-991e-2c00578145fb
+      restapiintegration:
+        authType: oauth-client-cred
+        body: ""
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers:
+          - key: Content-Type
+            value: application/json
+            valueOptions: []
+        httpMethod: GET
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params:
+          - key: expand
+            value: taxCategory
+            valueOptions: []
+          - key: expand
+            value: zone
+            valueOptions: []
+        responseType: auto
+        urlBase: ""
+        urlPath: demo-commerce/shipping-methods
+metadata:
+  description: ""
+  folder: ""
+  id: f3ffecde-b715-4d0b-a968-e83044ed6614
+  name: Shipping_get
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-09T16:44:23.564Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149

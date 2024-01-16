@@ -1,0 +1,37 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 7e26d403-aa0d-4924-991e-2c00578145fb
+      restapiintegration:
+        authType: oauth-client-cred
+        body: |-
+          {
+            "name" : "UK"
+
+          }
+        bodyType: jsonBody
+        fileFormKey: ""
+        fileName: ""
+        formData: []
+        headers: []
+        httpMethod: POST
+        jsonBody: ""
+        openApiAction: genericHttpRequest
+        openApiSpecRef: ""
+        params: []
+        responseType: auto
+        urlBase: ""
+        urlPath: demo-commerce/zones
+metadata:
+  description: ""
+  folder: ""
+  id: 42f4e1c0-80d6-475f-b34d-503794be64ec
+  name: zone
+  organization: a8fabcf7-bc27-49cd-a718-f16cc6e9e86a
+  tags: {}
+  timestamps:
+    updated: 2024-01-09T16:33:02.278Z
+  version: ""
+trigger:
+  application:
+    id: 687b112f-3112-4e28-9457-08ddc9113149
